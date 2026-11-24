@@ -7,20 +7,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        black: '#050505',
-        white: '#F0F0F0',
-        accent: '#D3FF00', // Neon Lime
+        black: '#000000',
+        white: '#E6EAE7',
+        accent: '#B8FFC6', // Phosphor
+        dim: '#4E7A57',    // Phosphor, low
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        mono: ['Space Mono', 'monospace'],
-        display: ['Oswald', 'sans-serif'],
-      },
-      animation: {
-        'spin-slow': 'spin 12s linear infinite',
+        sans: ['"IBM Plex Sans KR"', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'monospace'],
+        display: ['"IBM Plex Sans KR"', 'sans-serif'],
       },
     },
   },
   plugins: [],
 }
-

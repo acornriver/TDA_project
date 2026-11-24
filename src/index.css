@@ -3,11 +3,39 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    background: #000;
+  }
   body {
     @apply bg-black text-white font-sans antialiased selection:bg-accent selection:text-black;
+  }
+  @media (pointer: fine) {
+    html, a, button {
+      cursor: none;
+    }
+  }
+  :focus-visible {
+    outline: 1px solid #B8FFC6;
+    outline-offset: 4px;
+  }
+}
+
+@layer utilities {
+  .graticule {
+    background-image:
+      linear-gradient(rgba(184, 255, 198, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(184, 255, 198, 0.045) 1px, transparent 1px);
+    background-size: 96px 96px;
+    background-position: center center;
+  }
+  .scanlines {
+    background: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.16) 0px, rgba(0, 0, 0, 0.16) 1px, transparent 1px, transparent 3px);
+  }
+  .vignette {
+    background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.65) 100%);
   }
 }
 
 :root {
-  --color-accent: #D3FF00;
+  --color-accent: #B8FFC6;
 }
